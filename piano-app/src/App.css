@@ -1,0 +1,55 @@
+body {
+  background: #111;
+  color: white;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Contenedor deslizable */
+.piano-wrapper {
+  width: 100%;
+  overflow-x: auto;     /* Scroll horizontal */
+  overflow-y: hidden;
+  padding: 20px 0;
+}
+
+/* El piano completo */
+.piano {
+  display: flex;
+  width: max-content;    /* Se ajusta al número de teclas */
+  height: 220px;         /* Altura fija = misma proporción siempre */
+  margin: auto;
+}
+
+/* Teclas */
+.key {
+  background: white;
+  color: black;
+  border: 1px solid black;
+  width: 65px;
+  height: 220px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 10px;
+  font-weight: bold;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+/* Efecto al presionar */
+.key:active {
+  background: #ccc;
+}
+
+/* Scroll bonito (opcional) */
+.piano-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+.piano-wrapper::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
